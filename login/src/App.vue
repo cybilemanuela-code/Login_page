@@ -1,13 +1,13 @@
 
 <template>
-  <!-- Conteneur principal -->
+  
   <div class="container">
     <h2>Login</h2>
 
     <!-- Formulaire avec prévention du rechargement -->
     <form @submit.prevent="login">
 
-      <!-- Champ email lié à la variable email -->
+     
       <input 
         type="email" 
         v-model="email" 
@@ -35,9 +35,9 @@ export default {
   // Données du composant
   data() {
     return {
-      email: "",       // stocke l'email saisi
-      password: "",    // stocke le mot de passe saisi
-      message: ""      // message affiché à l'utilisateur
+      email: "",       
+      password: "",    
+      message: ""     
     }
   },
 
@@ -45,15 +45,15 @@ export default {
   methods: {
     login() {
 
-      // Vérifie si les champs sont vides
+      
       if (!this.email || !this.password) {
         this.message = "All fields are required";
         return;
       }
 
-      // Identifiants simulés (fake)
-      const correctEmail = "admin@test.com";
-      const correctPassword = "1234";
+      
+      const correctEmail = "cybile@gmail.com";
+      const correctPassword = "manuela";
 
       // Vérification des identifiants
       if (this.email === correctEmail && this.password === correctPassword) {
@@ -109,7 +109,7 @@ h2 {
   color: #333;
 }
 
-/* Champs input */
+
 input {
   display: block;
   width: 100%;
@@ -120,13 +120,13 @@ input {
   transition: 0.3s;
 }
 
-/* Effet focus */
+
 input:focus {
   border-color: #667eea;
   outline: none;
 }
 
-/* Bouton */
+
 button {
   width: 100%;
   padding: 10px;
@@ -140,23 +140,22 @@ button {
   transition: 0.3s;
 }
 
-/* Hover bouton */
+
 button:hover {
   background: #5a67d8;
 }
 
-/* Message */
+
 p {
   margin-top: 15px;
   font-weight: bold;
 }
 
-/* Message succès */
 p:contains("successful") {
   color: green;
 }
 
-/* Message erreur */
+
 p:contains("Invalid"),
 p:contains("required") {
   color: red;
